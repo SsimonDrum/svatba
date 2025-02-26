@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vítejte</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <div class="welcome-page"></div>
+
+    <!-- Countdown Header -->
+    <h1 class=countdown-header>Odpočet:</h1>
+
+    <!-- Countdown Timer -->
+    <div class="countdown-container">
+        <div id="countdown">
+            <span id="days">00</span>:<span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
+        </div>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="button-container">
+        <a href="#jak-se-k-nam-dostat" class="info-button">Jak se k nám dostat</a>
+        <a href="#co-si-vzit-na-sebe" class="info-button">Co si vzít na sebe</a>
+        <a href="#questionnaire" class="info-button">Dotazník</a>
+    </div>
+
+    <!-- Info Sections -->
+    <!-- Map Section -->
+    <div id="jak-se-k-nam-dostat" class="info-section">
+        <h1>Jak se k nám dostat</h1>
+        <div class="map-container">
+            <!-- Clickable Map -->
+            <img 
+            src="/assets/images/Mapa.PNG" 
+            alt="Mapa areálu" 
+            class="small-map" 
+            onclick="openModal()"
+            >
+            <!-- Navigation Button -->
+            <a href="https://www.google.com/maps/place/Opajda/..." target="_blank" class="directions-button">
+                📍 Klikni pro navigaci
+            </a>
+        </div>
+    </div>
+
+    <!-- Modal window -->
+    <div id="mapModal" class="modal" style="display: none;">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="mapImage" class="modal-content" src="">
+    </div>
+
+    <!-- Questionnaire -->
+    <div id="questionnaire" class="info-section">
+        <iframe 
+            src="https://docs.google.com/forms/d/e/1FAIpQLSdAJKiL4Cn8RWpwr5jAiYZRlVNq089YJQ5rP8Uawa8GPIk4Gg/viewform" 
+            width="100%" 
+            height="800" 
+            frameborder="0" 
+            marginheight="0" 
+            marginwidth="0">
+            Načítání…
+        </iframe>
+    </div>
+
+    <div id="FAQ" class="info-section">
+        <h1>Běžné info:</h1>
+        <p>Svatební dary...</p>
+        <p>Tipy na oblečení...</p>
+    </div>
+
+    <script src="modal.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
