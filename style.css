@@ -10,7 +10,8 @@ body {
 .welcome-page {
     position: relative;
     height: 100vh;
-    background: url('/assets/images/welcome.jpg') no-repeat center center/cover;
+    background: url('https://ssimondrum.github.io/svatba/welcome.jpg') no-repeat center center/cover;
+    background-size: cover;
 }
 
 .countdown-header {
@@ -38,11 +39,12 @@ body {
 
 /* Buttons */
 .button-container {
-    text-align: center;
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically on small screens */
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
     padding: 20px;
-    background: #fff;
-    max-width: 800px;
-    margin: 20px auto;
 }
 
 .info-button, .directions-button {
@@ -57,6 +59,9 @@ body {
     margin: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     font-family: 'Roboto', sans-serif;
+    max-width: 90%;
+    box-sizing: border-box;
+    text-align: center;
 }
 
 .info-button:hover, .directions-button:hover {
@@ -120,13 +125,25 @@ body {
     margin-top: 20px;
 }
 
+.map-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    flex-wrap: wrap; /* Wrap items on small screens */
+    padding: 0 10px; /* Add padding to avoid touching screen edges */
+}
+
 /* Style the Map Button */
 .small-map {
     display: inline-block;
-    width: 200px;
-    height: 200px;
+    width: 90%; /* Use a percentage width */
+    max-width: 300px; /* Limit maximum size */
+    height: auto;
+    aspect-ratio: 1/1; /* Keep it square */
     font-size: 1.2em;
-    background: url('assets/images/mapa.png') no-repeat center center/cover;
+    background: url('https://ssimondrum.github.io/svatba/mapa.png') no-repeat center center/cover;
     background-size: cover;
     border: 2px solid #000;
     border-radius: 10px;
@@ -143,8 +160,10 @@ body {
 /* Style the Navigation Button */
 .directions-button {
     display: inline-block;
-    width: 200px;
-    height: 200px;
+    width: 90%; /* Use percentage for responsiveness */
+    max-width: 300px; /* Limit maximum width */
+    height: auto;
+    aspect-ratio: 1/1; /* Keep square ratio */
     font-size: 1.2em;
     background-color: #fff;
     color: #000;
@@ -165,6 +184,7 @@ body {
     background-color: #f0f0f0;
     transform: scale(1.05);
 }
+
 
 /* Modal Styles */
 .modal {
