@@ -1,13 +1,198 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding: 20px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
     background-color: #f9f9f9;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
+/* Welcome Page */
+.welcome-page {
+    position: relative;
+    height: 100vh;
+    background: url('/assets/images/welcome.jpg') no-repeat center center/cover;
+}
+
+.countdown-header {
+    text-align: center;
+    padding: 20px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 2em;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+/* Countdown */
+.countdown-container {
+    text-align: center;
+    padding: 20px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 2em;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 5px solid #000;
+    border-radius: 10px;
+}
+
+/* Buttons */
+.button-container {
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.info-button, .directions-button {
+    display: inline-block;
+    padding: 20px 40px;
+    font-size: 1.2em;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    border: 2px solid #000;
+    border-radius: 5px;
+    margin: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', sans-serif;
+}
+
+.info-button:hover, .directions-button:hover {
+    background-color: #f0f0f0;
+}
+
+.info-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    margin: 10px auto; /* Reduced margin to tighten the gap */
+    max-width: 800px;
+}
+
+.info-section,
+.button-container,
+.map-container {
+    border-bottom: 2px solid #ccc; /* Light gray dividing line */
+    padding-bottom: 20px;
+}
+
+.info-section:last-child,
+.map-container:last-child {
+    border-bottom: none; /* Remove line after the last section */
+}
+
+/* Form */
+#questionnaire-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#questionnaire-form input, 
+#questionnaire-form select, 
+#questionnaire-form textarea {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#questionnaire-form button {
+    padding: 15px;
+    font-size: 1.2em;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Map & Navigation Layout */
+.map-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Style the Map Button */
+.small-map {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    font-size: 1.2em;
+    background: url('assets/images/mapa.png') no-repeat center center/cover;
+    background-size: cover;
+    border: 2px solid #000;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.small-map:hover {
+    transform: scale(1.05);
+    background-color: #f0f0f0;
+}
+
+/* Style the Navigation Button */
+.directions-button {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    font-size: 1.2em;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    border: 2px solid #000;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    transition: transform 0.2s ease;
+}
+
+.directions-button:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    border: 5px solid #fff;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 2em;
+    cursor: pointer;
 }
