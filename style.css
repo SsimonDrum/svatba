@@ -143,7 +143,7 @@ body {
     height: auto;
     aspect-ratio: 1/1; /* Keep it square */
     font-size: 1.2em;
-    background: url('https://user.github.io/svatba/mapa.png') no-repeat center center/cover;
+    background: url('https://ssimondrum.github.io/svatba/mapa.png') no-repeat center center/cover;
     background-size: cover;
     border: 2px solid #000;
     border-radius: 10px;
