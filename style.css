@@ -123,14 +123,6 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: 20px;
-}
-
-.map-container {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
     flex-wrap: wrap; /* Wrap items on small screens */
     padding: 0 10px; /* Add padding to avoid touching screen edges */
 }
@@ -138,12 +130,12 @@ body {
 /* Style the Map Button */
 .small-map {
     display: inline-block;
-    width: 90%; /* Use a percentage width */
+    flex: 1 1 300px; /* Flexible width with base size */
     max-width: 300px; /* Limit maximum size */
     height: auto;
     aspect-ratio: 1/1; /* Keep it square */
     font-size: 1.2em;
-    background: url('https://ssimondrum.github.io/svatba/mapa.png') no-repeat center center/cover;
+    background: url('https://user.github.io/svatba/mapa.png') no-repeat center center/cover;
     background-size: cover;
     border: 2px solid #000;
     border-radius: 10px;
@@ -160,7 +152,7 @@ body {
 /* Style the Navigation Button */
 .directions-button {
     display: inline-block;
-    width: 90%; /* Use percentage for responsiveness */
+    flex: 1 1 300px; /* Flexible width with base size */
     max-width: 300px; /* Limit maximum width */
     height: auto;
     aspect-ratio: 1/1; /* Keep square ratio */
@@ -184,7 +176,6 @@ body {
     background-color: #f0f0f0;
     transform: scale(1.05);
 }
-
 
 /* Modal Styles */
 .modal {
