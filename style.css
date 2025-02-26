@@ -10,7 +10,7 @@ body {
 .welcome-page {
     position: relative;
     height: 100vh;
-    background: url('{{ site.baseurl }}/welcome.jpg') no-repeat center center/cover;
+    background: url('https://ssimondrum.github.io/svatba/welcome.jpg') no-repeat center center/cover;
 }
 
 .countdown-header {
