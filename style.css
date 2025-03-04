@@ -1,67 +1,23 @@
-/* General Styles */
-body {
+/* Global styles */
+* {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
-    background-color: #f9f9f9;
-    height: 100vh;
-    scroll-behavior: smooth;
+    box-sizing: border-box;
 }
 
-/* Welcome Page */
-.welcome-page {
-    position: relative;
+body {
+    font-family: 'Didot', Times, serif;
     height: 100vh;
-    background: url('https://ssimondrum.github.io/svatba/welcome.jpg') no-repeat center center/cover;
-    background-size: cover;
+    scroll-behavior: smooth;
+    background: #ECECEC;
 }
 
 .page-container {
-    display: flex;
-    flex-direction: column;
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
     height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
 }
 
-/* Individual sections (like pages) */
-.page {
-    scroll-snap-align: start;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    color: white;
-    text-align: center;
-    font-size: 24px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-}
-
-.countdown-header {
-    text-align: center;
-    padding: 20px;
-    font-family: 'Roboto Mono', monospace;
-    font-size: 2em;
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: #fff;
-}
-
-/* Countdown */
-.countdown-container {
-    text-align: center;
-    padding: 20px;
-    font-family: 'Roboto Mono', monospace;
-    font-size: 2em;
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: #fff;
-    border: 5px solid #000;
-    border-radius: 10px;
-}
-
-/* Buttons */
 .button-container {
     position: fixed;
     top: 0;
@@ -70,9 +26,9 @@ body {
     display: flex;
     justify-content: center;
     gap: 10px;
-    padding: 20px;
+    padding: 10px;
     background: rgba(255, 255, 255, 0.9);
-    z-index: 10;
+    z-index: 100;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -80,159 +36,199 @@ body {
     text-decoration: none;
     background-color: white;
     color: black;
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 10px 15px;
+    font-size: 1.5rem;
+    font-family: 'Didot', Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
     cursor: pointer;
-    border: none;
-    outline: none;
     transition: background 0.3s;
 }
 
-.directions-button {
-    display: inline-block;
-    padding: 20px 40px;
-    font-size: 1.2em;
-    background-color: #fff;
-    color: #000;
-    text-decoration: none;
-    border: 2px solid #000;
-    border-radius: 5px;
-    margin: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    font-family: 'Roboto', sans-serif;
-    max-width: 90%;
-    box-sizing: border-box;
-    text-align: center;
+.info-button:hover {
+    background-color: lightgrey;
 }
 
-.directions-button:hover {
-    background-color: #f0f0f0;
+/* Welcome page section */
+.welcome-page {
+    height: calc(100vh - 80px);
+    margin-top: 80px;
+    background: url('welcome.jpg') no-repeat left center;
+    background-size: contain;
+    scroll-snap-align: start;
+    background-color: #ECECEC;
 }
 
-
-.map-container {
-    border-bottom: 2px solid #ccc; /* Light gray dividing line */
-    padding-bottom: 20px;
-}
-
-
-.map-container:last-child {
-    border-bottom: none; /* Remove line after the last section */
-}
-
-/* Form */
-#questionnaire-form {
+/* Příjezdové informace section */
+.arrival-info {
+    scroll-snap-align: start;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    background: url('car.jpg') no-repeat center center/contain;
+    background-color: #ECECEC;
+    color: black;
+    padding-top: 140px;
 }
 
-#questionnaire-form input, 
-#questionnaire-form select, 
-#questionnaire-form textarea {
-    padding: 10px;
-    font-size: 1em;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.arrival-info h1 {
+    font-size: 48px;
+    font-weight: 700;
+    font-family: 'Didot', Times, serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
 }
 
-#questionnaire-form button {
-    padding: 15px;
-    font-size: 1.2em;
-    background-color: #4CAF50;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-}
-
-/* Map & Navigation Layout */
-.map-container {
+/* Parking section */
+.parking-info {
+    scroll-snap-align: start;
     display: flex;
     gap: 20px;
+    align-items: flex-start;
     justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    flex-wrap: wrap; /* Wrap items on small screens */
-    padding: 0 10px; /* Add padding to avoid touching screen edges */
+    margin-top: 30px;
+    background-color: #ECECEC;
 }
 
-/* Style the Map Button */
-.small-map {
-    display: inline-block;
-    flex: 1 1 300px; /* Flexible width with base size */
-    max-width: 300px; /* Limit maximum size */
-    height: auto;
-    aspect-ratio: 1/1; /* Keep it square */
-    font-size: 1.2em;
-    background: url('https://user.github.io/svatba/mapa.png') no-repeat center center/cover;
-    background-size: cover;
-    border: 2px solid #000;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: transform 0.2s ease;
-}
-
-.small-map:hover {
-    transform: scale(1.05);
-    background-color: #f0f0f0;
-}
-
-/* Style the Navigation Button */
-.directions-button {
-    display: inline-block;
-    flex: 1 1 300px; /* Flexible width with base size */
-    max-width: 300px; /* Limit maximum width */
-    height: auto;
-    aspect-ratio: 1/1; /* Keep square ratio */
-    font-size: 1.2em;
-    background-color: #fff;
-    color: #000;
-    text-decoration: none;
-    border: 2px solid #000;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    font-family: 'Roboto', sans-serif;
+.parking-info .parking-item {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    text-align: center;
-    padding: 10px;
-    transition: transform 0.2s ease;
+    gap: 10px;
 }
 
-.directions-button:hover {
-    background-color: #f0f0f0;
-    transform: scale(1.05);
+.parking-info img {
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+    border: none;
 }
 
-/* Modal Styles */
-.modal {
+/* Modal styles */
+#mapModal {
     display: none;
     position: fixed;
-    z-index: 10;
+    z-index: 999;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
-    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
     justify-content: center;
+    align-items: center;
 }
 
-.modal-content {
-    max-width: 90%;
-    max-height: 90%;
-    border: 5px solid #fff;
+#mapModal img {
+    max-width: 95%;
+    max-height: 95%;
+    width: 90vw;  /* Fill 90% of the viewport width */
+    height: auto; /* Maintain aspect ratio */
+    border: 2px solid white;
     border-radius: 10px;
 }
 
-.close {
+#mapModal .close-button {
     position: absolute;
     top: 20px;
-    right: 30px;
-    color: #fff;
-    font-size: 2em;
+    right: 20px;
+    font-size: 30px;
+    color: white;
     cursor: pointer;
+}
+
+
+.directions-button {
+    text-decoration: none;
+    background-color: #e0e0e0;
+    color: #333;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: 'Didot', Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.directions-button:hover {
+    background-color: #d0d0d0;
+}
+
+/* FAQ section */
+.faq-section {
+    scroll-snap-align: start;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: #ECECEC;
+    color: black;
+    padding-top: 120px;
+}
+
+.faq-section h1 {
+    font-size: 48px;
+    font-family: 'Didot', Times, serif;
+    margin-bottom: 20px;
+}
+
+.faq-section p {
+    font-size: 18px;
+    max-width: 800px;
+    text-align: center;
+}
+
+/* Questionnaire section */
+.info-section {
+    scroll-snap-align: start;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    background: #ECECEC;
+    color: black;
+    padding-top: 120px;
+}
+
+.info-section iframe {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    border: none;
+    overflow: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .info-button {
+        font-size: 1.2rem;
+        padding: 8px 12px;
+    }
+    .button-container {
+        flex-wrap: wrap;
+        padding: 10px 5px;
+    }
+    .welcome-page h1, .arrival-info h1, .faq-section h1, .program-section h1 {
+        font-size: 32px;
+    }
+    .arrival-info, .faq-section, .info-section, .program-section {
+        padding: 20px 10px;
+        padding-top: 100px;
+    }
+    .arrival-info h1 {
+        font-size: 36px;
+    }
+    .parking-info img {
+        width: 150px; /* Even smaller for mobile screens */
+    }
 }
