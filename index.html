@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vítejte</title>
-    <script src="https://ssimondrum.github.io/svatba/modal.js"></script>
     <link rel="stylesheet" href="https://ssimondrum.github.io/svatba/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Didot&display=swap">
 </head>
@@ -14,7 +13,7 @@
         <div class="button-container">
             <a href="#welcome-page" class="info-button">Domů</a>
             <a href="#Program" class="info-button">Program</a>
-            <a href="#prijezdove-informace" class="info-button">Příjezd</a>
+            <a href="#prijezdove-informace" class="info-button">Navigace</a>
             <a href="#FAQ" class="info-button">Informace</a>
             <a href="#questionnaire" class="info-button">Dotazník</a>
         </div>
@@ -27,25 +26,15 @@
             <h1>PROGRAM</h1>
             <p>TBA...</p>
         </div>
-
+        
         <!-- Příjezdové informace Section -->
         <section id="prijezdove-informace" class="arrival-info">
-            <h1>PŘÍJEZD</h1>
             <div class="parking-info">
                 <div class="parking-item">
-                    <img src="https://ssimondrum.github.io/svatba/gps-icon.png" alt="Car Navigation Icon">
+                    <img src="https://ssimondrum.github.io/svatba/navi.png" alt="Car Navigation Icon">
                     <a href="https://maps.app.goo.gl/HEjFkP3oNCrstmt16" target="_blank" class="directions-button">
                         Navigovat
                     </a>
-                </div>
-                <div class="parking-item">
-                    <img src="https://ssimondrum.github.io/svatba/parking-icon.png" alt="Parking Icon">
-                    <button class="directions-button" onclick="openModal()">Mapa Areálu</button>
-                </div>
-                
-                <div id="mapModal">
-                    <span class="close-button" onclick="closeModal()">&times;</span>
-                    <img id="mapImage" src="https://ssimondrum.github.io/svatba/mapa_arealu.png" alt="Mapa Areálu">
                 </div>
             </div>
         </section>
@@ -71,5 +60,27 @@
             </iframe>
         </div>
     </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            function adjustSpacing() {
+                const buttonContainer = document.querySelector(".button-container");
+                const parkingImage = document.querySelector(".parking-item img"); // Select the image
+                const sections = document.querySelectorAll(".arrival-info, .faq-section, .info-section, .program-section");
+            
+                if (buttonContainer && parkingImage) {
+                    let buttonHeight = buttonContainer.offsetHeight;
+                    let imageHeight = parkingImage.offsetHeight;
+                
+                    // Apply dynamic margin, considering both the button and the image height
+                    sections.forEach(section => {
+                        section.style.marginTop = `${buttonHeight + imageHeight + 40}px`; // Adjusted for better spacing
+                    });
+                }
+            }
+        
+            adjustSpacing(); // Run on page load
+            window.addEventListener("resize", adjustSpacing); // Adjust on resize
+        });
+    </script>
 </body>
 </html>
