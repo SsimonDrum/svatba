@@ -28,7 +28,7 @@
         </div>
         
         <!-- Příjezdové informace Section -->
-        <section id="prijezdove-informace" class="arrival-info">
+        <section id="prijezdove-informace" class="arrival-section">
             <div class="navigation-info">
                 <img src="https://ssimondrum.github.io/svatba/navi.png" alt="Car Navigation Icon">
                 <a href="https://maps.app.goo.gl/HEjFkP3oNCrstmt16" target="_blank" class="directions-button">
@@ -45,7 +45,6 @@
 
         <!-- Questionnaire -->
         <div id="questionnaire" class="info-section">
-            <h1>Dotazník</h1>
             <iframe 
                 src="https://docs.google.com/forms/d/e/1FAIpQLSdAJKiL4Cn8RWpwr5jAiYZRlVNq089YJQ5rP8Uawa8GPIk4Gg/viewform" 
                 width="100%" 
@@ -58,27 +57,5 @@
             </iframe>
         </div>
     </div>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            function adjustSpacing() {
-                const buttonContainer = document.querySelector(".button-container");
-                const parkingImage = document.querySelector(".parking-item img"); // Select the image
-                const sections = document.querySelectorAll(".arrival-info, .faq-section, .info-section, .program-section");
-            
-                if (buttonContainer && parkingImage) {
-                    let buttonHeight = buttonContainer.offsetHeight;
-                    let imageHeight = parkingImage.offsetHeight;
-                
-                    // Apply dynamic margin, considering both the button and the image height
-                    sections.forEach(section => {
-                        section.style.marginTop = `${buttonHeight + imageHeight + 40}px`; // Adjusted for better spacing
-                    });
-                }
-            }
-        
-            adjustSpacing(); // Run on page load
-            window.addEventListener("resize", adjustSpacing); // Adjust on resize
-        });
-    </script>
 </body>
 </html>
