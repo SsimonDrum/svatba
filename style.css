@@ -157,16 +157,9 @@ body {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .arrival-info, .faq-section, .info-section, .program-section {
-        padding-top: 150px;
-    }
-
-    .arrival-info {
-        padding-top: 180px;
-    }
-
-    .info-section {
-        padding-top: 150px;
+    
+    .button-container {
+        flex-wrap: wrap;
     }
 
     .parking-item {
