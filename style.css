@@ -81,7 +81,7 @@ body {
 }
 
 /* Container for image and button */
-.parking-item {
+.parking-info {
     display: flex;
     flex-direction: column; /* Stack items vertically */
     align-items: center; /* Center align */
@@ -89,7 +89,7 @@ body {
 }
 
 /* Image styling */
-.parking-item img {
+.parking-info img {
     max-width: 100%; /* Keep it responsive */
     height: auto;
 }
@@ -194,8 +194,8 @@ body {
         font-size: 36px;
     }
 
-    /* Ensure parking-item elements stack properly on small screens */
-    .parking-item {
+    /* Ensure parking-info elements stack properly on small screens */
+    .parking-info {
         flex-direction: column; /* Stack elements vertically */
         align-items: center; /* Center align */
         gap: 15px; /* Reduce gap for smaller screens */
@@ -203,7 +203,7 @@ body {
     }
 
     /* Make the image responsive */
-    .parking-item img {
+    .parking-info img {
         max-width: 80%; /* Reduce size for better fit */
         height: auto;
     }

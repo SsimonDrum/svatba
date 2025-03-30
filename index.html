@@ -30,12 +30,10 @@
         <!-- Příjezdové informace Section -->
         <section id="prijezdove-informace" class="arrival-info">
             <div class="parking-info">
-                <div class="parking-item">
-                    <img src="https://ssimondrum.github.io/svatba/navi.png" alt="Car Navigation Icon">
-                    <a href="https://maps.app.goo.gl/HEjFkP3oNCrstmt16" target="_blank" class="directions-button">
-                        Navigovat
-                    </a>
-                </div>
+                <img src="https://ssimondrum.github.io/svatba/navi.png" alt="Car Navigation Icon">
+                <a href="https://maps.app.goo.gl/HEjFkP3oNCrstmt16" target="_blank" class="directions-button">
+                    Navigovat
+                </a>
             </div>
         </section>
 
@@ -64,7 +62,7 @@
         document.addEventListener("DOMContentLoaded", function () {
             function adjustSpacing() {
                 const buttonContainer = document.querySelector(".button-container");
-                const parkingImage = document.querySelector(".parking-item img"); // Select the image
+                const parkingImage = document.querySelector(".parking-info img"); // Select the image
                 const sections = document.querySelectorAll(".arrival-info, .faq-section, .info-section, .program-section");
             
                 if (buttonContainer && parkingImage) {
