@@ -16,6 +16,7 @@ body {
     height: 100vh;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
+    padding-top: 60px;
 }
 
 .button-container {
@@ -60,48 +61,54 @@ body {
     background-color: #ECECEC;
 }
 
-
-/* Navi section */
-.navigation-info {
+/* Příjezdové informace section */
+.arrival-info {
     scroll-snap-align: start;
-    display: flex;
-    gap: 20px;
-    align-items: flex-start;
-    justify-content: center;
-    margin-top: 30px;
-    background-color: #ECECEC;
-}
-
-.navigation-info {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    justify-content: flex-start;
+    padding: 20px;
+    background-color: #ECECEC;
+    color: black;
+    padding-top: 140px;
 }
 
-.navigation-info img {
-    width: 200px;
+/* Container for image and button */
+.parking-item {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align */
+    gap: 20px; /* Space between image and button */
+}
+
+/* Image styling */
+.parking-item img {
+    max-width: 100%; /* Keep it responsive */
     height: auto;
-    object-fit: contain;
-    border: none;
 }
 
+/* Button styling */
 .directions-button {
     text-decoration: none;
-    background-color: #e0e0e0;
+    background-color: rgba(0, 0, 0, 0.1); /* Light transparent background */
     color: #333;
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 15px 20px;
+    font-size: 25px;
     font-family: 'Didot', Arial, sans-serif;
     text-transform: uppercase;
     letter-spacing: 1px;
-    border: none;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background 0.3s, color 0.3s;
+    display: inline-block;
+    text-align: center;
+    border-radius: 5px; /* Slight rounded edges */
 }
 
 .directions-button:hover {
     background-color: #d0d0d0;
+    color: black;
 }
 
 /* FAQ section */
@@ -154,25 +161,28 @@ body {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .info-button {
-        font-size: 1.2rem;
-        padding: 8px 12px;
-    }
-    .button-container {
-        flex-wrap: wrap;
-        padding: 10px 5px;
-    }
-    .welcome-page h1, .arrival-info h1, .faq-section h1, .program-section h1 {
-        font-size: 32px;
-    }
     .arrival-info, .faq-section, .info-section, .program-section {
-        padding: 20px 10px;
-        padding-top: 100px;
+        padding-top: 150px;
     }
-    .arrival-info h1 {
-        font-size: 36px;
+
+    .arrival-info {
+        padding-top: 180px;
     }
-    .navigation-info img {
-        width: 150px; /* Even smaller for mobile screens */
+
+    .info-section {
+        padding-top: 150px;
+    }
+
+    .parking-item {
+        gap: 10px;
+    }
+
+    .parking-item img {
+        max-width: 80%;
+    }
+
+    .directions-button {
+        font-size: 20px;
+        padding: 12px 18px;
     }
 }
