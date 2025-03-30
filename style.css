@@ -19,6 +19,7 @@ body {
     padding-top: 60px;
 }
 
+/* Buttons */
 .button-container {
     position: fixed;
     top: 0;
@@ -62,7 +63,7 @@ body {
 }
 
 /* Příjezdové informace section */
-.arrival-info {
+.arrival-section {
     scroll-snap-align: start;
     min-height: 100vh;
     display: flex;
@@ -76,7 +77,7 @@ body {
 }
 
 /* Container for image and button */
-.parking-item {
+.navigation-info {
     display: flex;
     flex-direction: column; /* Stack items vertically */
     align-items: center; /* Center align */
@@ -84,7 +85,7 @@ body {
 }
 
 /* Image styling */
-.parking-item img {
+.navigation-info img {
     max-width: 100%; /* Keep it responsive */
     height: auto;
 }
@@ -161,24 +162,22 @@ body {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .arrival-info, .faq-section, .info-section, .program-section {
-        padding-top: 150px;
+    
+    .button-container {
+        flex-wrap: wrap;
     }
 
-    .arrival-info {
+    .info-section{
         padding-top: 180px;
     }
 
-    .info-section {
-        padding-top: 150px;
-    }
-
-    .parking-item {
+    .navigation-info {
         gap: 10px;
     }
 
-    .parking-item img {
-        max-width: 80%;
+    .navigation-info img {
+        padding-top: 120px;
+        max-width: 70%;
     }
 
     .directions-button {
