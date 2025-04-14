@@ -3,10 +3,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Didot';
+
 }
 
 body {
-    font-family: 'Didot', Times, serif;
+    
     height: 100vh;
     scroll-behavior: smooth;
     background: #ECECEC;
@@ -16,7 +18,6 @@ body {
     height: 100vh;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
-    padding-top: 60px;
 }
 
 /* Buttons */
@@ -39,7 +40,6 @@ body {
     color: black;
     padding: 10px 15px;
     font-size: 1.5rem;
-    font-family: 'Didot', Arial, sans-serif;
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 1px;
@@ -96,7 +96,6 @@ body {
     color: #333;
     padding: 15px 20px;
     font-size: 25px;
-    font-family: 'Didot', Arial, sans-serif;
     text-transform: uppercase;
     letter-spacing: 1px;
     cursor: pointer;
@@ -110,6 +109,46 @@ body {
     background-color: #d0d0d0;
     color: black;
 }
+
+
+/* Program section */
+.program-section {
+    scroll-snap-align: start;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Changed to align events top-down */
+    padding: 20px;
+    background: #ECECEC;
+    color: black;
+    padding-top: 120px;
+}
+
+.program-section .event {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 400px;
+    font-size: 20px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid transparent; /* Optional: add hover effect */
+}
+
+.program-section .time {
+    font-weight: 500;
+    width: 80px;
+    text-align: left;
+    font-family: 'Courier New', monospace; /* or any font you like */
+}
+
+.program-section .title {
+    font-weight: 400;
+    flex: 1;
+    text-align: right;
+    font-family: 'Georgia', serif; /* or your preferred font */
+}
+
 
 /* FAQ section */
 .faq-section {
@@ -127,13 +166,18 @@ body {
 
 .faq-section h1 {
     font-size: 48px;
-    font-family: 'Didot', Times, serif;
     margin-bottom: 20px;
+
+}
+
+.faq-section h2 {
+    font-size: 30px;
 }
 
 .faq-section p {
-    font-size: 18px;
+    font-size: 20px;
     max-width: 800px;
+    margin-bottom: 25px;
     text-align: center;
 }
 
