@@ -26,8 +26,8 @@ body {
     left: 0;
     width: 100%;
     display: flex;
-    flex-wrap: wrap; /* Allow buttons to wrap */
-    justify-content: center; /* Center align buttons */
+    flex-wrap: wrap; 
+    justify-content: center;
     background: rgba(255, 255, 255, 0.9);
     z-index: 100;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -74,24 +74,32 @@ body {
     padding-top: 140px;
 }
 
-/* Container for image and button */
-.navigation-info {
-    display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center align */
-    gap: 20px; /* Space between image and button */
-}
-
-/* Image styling */
-.navigation-info img {
-    max-width: 100%; /* Keep it responsive */
-    height: auto;
-}
+.arrival-section h2 {
+    font-family: 'Didot', serif;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+  
+  .map-container {
+    position: relative;
+    width: 100%;
+    height: 700px;
+    
+  }
+  
+  .map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
 
 /* Button styling */
 .directions-button {
     text-decoration: none;
-    background-color: rgba(0, 0, 0, 0.1); /* Light transparent background */
+    background-color: rgba(0, 0, 0, 0.1); 
     color: #333;
     padding: 15px 20px;
     font-size: 25px;
@@ -101,7 +109,7 @@ body {
     transition: background 0.3s, color 0.3s;
     display: inline-block;
     text-align: center;
-    border-radius: 5px; /* Slight rounded edges */
+    border-radius: 5px; 
 }
 
 .directions-button:hover {
@@ -117,15 +125,20 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start; /* Changed to align events top-down */
+    justify-content: flex-start; 
     padding: 20px;
     background: #ECECEC;
     color: black;
     padding-top: 120px;
 }
 
+.program-section h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
 .program-box {
-    background-color: #F7F7F7;
+    background-color: #fbfcfc;
     padding: 40px 30px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
     max-width: 500px;
@@ -140,21 +153,21 @@ body {
     font-size: 20px;
     align-items: baseline;
     margin-bottom: 12px;
-    border-bottom: 1px solid transparent; /* Optional: add hover effect */
+    border-bottom: 1px solid transparent;
 }
 
 .program-box .time {
-    font-weight: 600;
+    font-weight: 550;
     width: 100px;
-    font-size: 35px;
-    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    font-family: 'Lora', serif;
     text-align: left;
 }
 
 .program-box .title {
     font-weight: 300;
     width: 80px;
-    font-size: 27px;
+    font-size: 30px;
     flex: 1;
     font-family: 'Cormorant Garamond', serif;
     text-align: right;
@@ -213,34 +226,61 @@ body {
     overflow: auto;
 }
 
+.color-palette {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.color-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #333;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    cursor: default;
+}
+
 /* Responsive adjustments */
 @media (max-width: 400px) {
     
     .welcome-page {
-        height: calc(100vh - 80px);
-        margin-top: 100px;
+        height: calc(100vh);
         background: url('welcome-phone-version.png') no-repeat center;
-        background-size: contain;
         scroll-snap-align: start;
+        background-size: cover; 
         background-color: #ECECEC;
     }
-    
 
     .button-container {
         flex-wrap: wrap;
     }
 
-    .info-section, .program-section{
+    .info-section, .program-section, .arrival-section{
         padding-top: 180px;
     }
 
-    .navigation-info {
-        gap: 10px;
+    .program-box .time {
+        font-weight: 550;
+        width: 100px;
+        font-size: 23px;
+        font-family: 'Lora', serif;
+        text-align: left;
+    }
+    
+    .program-box .title {
+        font-weight: 300;
+        width: 80px;
+        font-size: 23px;
+        flex: 1;
+        font-family: 'Cormorant Garamond', serif;
+        text-align: right;
     }
 
-    .navigation-info img {
-        padding-top: 120px;
-        max-width: 70%;
+    
+    .map-container {
+        height: 300px;
     }
 
     .directions-button {
