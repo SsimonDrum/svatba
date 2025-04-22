@@ -54,7 +54,7 @@ body {
 .welcome-page {
     height: calc(100vh - 80px);
     margin-top: 100px;
-    background: url('welcome-web-version.png') no-repeat left center;
+    background: url('web-welcome.png') no-repeat left center;
     background-size: contain;
     scroll-snap-align: start;
     background-color: #ECECEC;
@@ -74,49 +74,28 @@ body {
     padding-top: 140px;
 }
 
-.arrival-section h2 {
+.arrival-section h1 {
     font-family: 'Didot', serif;
     font-size: 2.5rem;
     margin-bottom: 30px;
+    font-size: 48px;
   }
   
-  .map-container {
-    position: relative;
-    width: 100%;
-    height: 700px;
-    
-  }
+.map-container {
+  position: relative;
+  width: 100%;
+  height: 700px;
   
-  .map-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-  }
-
-/* Button styling */
-.directions-button {
-    text-decoration: none;
-    background-color: rgba(0, 0, 0, 0.1); 
-    color: #333;
-    padding: 15px 20px;
-    font-size: 25px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    cursor: pointer;
-    transition: background 0.3s, color 0.3s;
-    display: inline-block;
-    text-align: center;
-    border-radius: 5px; 
 }
 
-.directions-button:hover {
-    background-color: #d0d0d0;
-    color: black;
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
-
 
 /* Program section */
 .program-section {
@@ -138,8 +117,8 @@ body {
 }
 
 .program-box {
-    background-color: #fbfcfc;
     padding: 40px 30px;
+    background-color: #ffffff;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
     max-width: 500px;
     width: 100%;
@@ -147,30 +126,26 @@ body {
 
 .program-box .event {
     display: flex;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 400px;
-    font-size: 20px;
-    align-items: baseline;
-    margin-bottom: 12px;
-    border-bottom: 1px solid transparent;
+    align-items: flex-start;
+    gap: 65px; /* space between time and title */
+    margin-bottom: 16px;
 }
 
+
 .program-box .time {
-    font-weight: 550;
-    width: 100px;
-    font-size: 30px;
-    font-family: 'Lora', serif;
-    text-align: left;
+  font-weight: 600;
+  font-size: 28px;
+  width: 80px;
+  flex-shrink: 0;
+  font-family: 'Lora', serif;
+  text-align: right;
 }
 
 .program-box .title {
-    font-weight: 300;
-    width: 80px;
-    font-size: 30px;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 1.4;
     flex: 1;
-    font-family: 'Cormorant Garamond', serif;
-    text-align: right;
 }
 
 
@@ -189,23 +164,21 @@ body {
 }
 
 .faq-section h1 {
-    font-size: 48px;
+    font-size: 40px;
     margin-bottom: 20px;
 }
 
-.faq-section h2 {
-    font-size: 30px;
-}
 
 .faq-section p {
-    font-size: 20px;
+    font-size: 25px;
+    opacity: 0.8;
     max-width: 800px;
     margin-bottom: 25px;
     text-align: center;
 }
 
 /* Questionnaire section */
-.info-section {
+.q-section {
     scroll-snap-align: start;
     min-height: 100vh;
     display: flex;
@@ -218,7 +191,7 @@ body {
     padding-top: 120px;
 }
 
-.info-section iframe {
+.q-section iframe {
     flex: 1;
     width: 100%;
     height: 100%;
@@ -247,38 +220,63 @@ body {
     
     .welcome-page {
         height: calc(100vh);
-        background: url('welcome-phone-version.png') no-repeat center;
+        background: url('web-welcome-phone-v2.png') no-repeat center;
         scroll-snap-align: start;
         background-size: cover; 
         background-color: #ECECEC;
+        background-position: left 50px;
     }
 
     .button-container {
         flex-wrap: wrap;
     }
 
-    .info-section, .program-section, .arrival-section{
+    .q-section, .program-section, .arrival-section {
         padding-top: 180px;
     }
 
-    .program-box .time {
-        font-weight: 550;
-        width: 100px;
-        font-size: 23px;
-        font-family: 'Lora', serif;
-        text-align: left;
+    .program-section h1, .arrival-section h1 {
+        margin-bottom: 30px;
+        font-size: 35px;
     }
-    
-    .program-box .title {
-        font-weight: 300;
-        width: 80px;
-        font-size: 23px;
-        flex: 1;
-        font-family: 'Cormorant Garamond', serif;
+
+    .program-box {
+        padding: 20px 15px; /* reduce padding on small screens */
+    }
+  
+    .faq-section {
+      padding: 40px 20px 20px; /* adjust padding for small screen */
+      padding-top: 180px;
+    }
+  
+    .faq-section h1 {
+      font-size: 28px; /* smaller heading */
+      margin-bottom: 16px;
+    }
+  
+    .faq-section p {
+      font-size: 18px; /* smaller text */
+      margin-bottom: 12px;
+      max-width: 100%; /* take full width on small screens */
+    }
+
+
+    .program-box .event {
+      flex-direction: row;       /* keep time and title in one line */
+      gap: 25px;                 /* smaller gap for tighter layout */
+      align-items: flex-start;
+    }
+
+    .program-box .time {
+        font-size: 22px;
+        width: 60px;               /* smaller fixed width for time */
         text-align: right;
     }
 
-    
+    .program-box .title {
+      font-size: 18px; /* smaller font for the title */
+    }
+
     .map-container {
         height: 300px;
     }
