@@ -7,8 +7,8 @@
 }
 
 body {
-    
     height: 100vh;
+    margin: 0; /* Remove default margin to avoid spacing issues */
     scroll-behavior: smooth;
     background: #ECECEC;
 }
@@ -17,6 +17,7 @@ body {
     height: 100vh;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
 }
 
 /* Buttons */
@@ -58,6 +59,7 @@ body {
     background-size: contain;
     scroll-snap-align: start;
     background-color: #ECECEC;
+    margin-bottom: 160px;
 }
 
 /* Příjezdové informace section */
@@ -108,7 +110,7 @@ body {
     padding: 20px;
     background: #ECECEC;
     color: black;
-    padding-top: 120px;
+    padding-top: 160px;
 }
 
 .program-section h1 {
@@ -127,7 +129,7 @@ body {
 .program-box .event {
     display: flex;
     align-items: flex-start;
-    gap: 65px; /* space between time and title */
+    gap: 65px;
     margin-bottom: 16px;
 }
 
@@ -151,6 +153,9 @@ body {
 
 /* FAQ section */
 .faq-section {
+    height: auto;
+    max-height: 100vh;
+    overflow-y: auto; 
     scroll-snap-align: start;
     min-height: 100vh;
     display: flex;
@@ -160,17 +165,18 @@ body {
     padding: 20px;
     background: #ECECEC;
     color: black;
-    padding-top: 120px;
+    padding-top: 160px;
+    box-sizing: border-box;
 }
 
 .faq-section h1 {
-    font-size: 40px;
+    font-size: 30px;
     margin-bottom: 20px;
 }
 
 
 .faq-section p {
-    font-size: 25px;
+    font-size: 20px;
     opacity: 0.8;
     max-width: 800px;
     margin-bottom: 25px;
@@ -199,25 +205,18 @@ body {
     overflow: auto;
 }
 
-.color-palette {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    margin: 40px 0;
-}
-
-.color-circle {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    border: 2px solid #333;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-    cursor: default;
-}
 
 /* Responsive adjustments */
 @media (max-width: 400px) {
     
+    .page-container {
+        height: 100vh;
+        overflow-y: scroll;
+        scroll-snap-type: y mandatory;
+        scroll-behavior: smooth;
+        padding-bottom: 100px;
+    }
+
     .welcome-page {
         height: calc(100vh);
         background: url('web-welcome-phone-v2.png') no-repeat center;
@@ -225,6 +224,12 @@ body {
         background-size: cover; 
         background-color: #ECECEC;
         background-position: left 50px;
+    }
+
+    .section {
+        scroll-snap-align: start;
+        padding-top: 160px;
+        min-height: 100vh; /* Ensures each section takes up at least the full viewport height */
     }
 
     .button-container {
@@ -246,12 +251,14 @@ body {
   
     .faq-section {
       padding: 40px 20px 20px; /* adjust padding for small screen */
-      padding-top: 180px;
+      padding-top: 500px;
+      padding-bottom: 150px;
+      margin-bottom: 100px;
     }
   
     .faq-section h1 {
-      font-size: 28px; /* smaller heading */
-      margin-bottom: 16px;
+      font-size: 22px; /* smaller heading */
+      margin-bottom: 12px;
     }
   
     .faq-section p {
@@ -259,7 +266,6 @@ body {
       margin-bottom: 12px;
       max-width: 100%; /* take full width on small screens */
     }
-
 
     .program-box .event {
       flex-direction: row;       /* keep time and title in one line */
@@ -270,7 +276,7 @@ body {
     .program-box .time {
         font-size: 22px;
         width: 60px;               /* smaller fixed width for time */
-        text-align: right;
+        text-align: left;
     }
 
     .program-box .title {
