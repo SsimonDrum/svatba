@@ -220,7 +220,8 @@ body {
     .welcome-page {
         height: 100vh;
         height: 100dvh; /* Graceful comeback */
-        background: url('web-welcome-phone-v2.png') no-repeat center;
+        padding-bottom: env(safe-area-inset-bottom);
+        background: url('web-welcome-phone-v2.png') no-repeat center bottom;
         scroll-snap-align: start;
         background-size: cover; 
         background-color: #ECECEC;
