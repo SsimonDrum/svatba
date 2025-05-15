@@ -223,9 +223,10 @@ body {
         padding-bottom: env(safe-area-inset-bottom);
         background: url('web-welcome-phone-v2.png') no-repeat center bottom;
         scroll-snap-align: start;
-        background-size: cover; 
+        background-size: contain; 
         background-color: #ECECEC;
-        background-position: left 50px;
+        background-repeat: no-repeat;
+        background-position: center bottom;
     }
 
     .section {
