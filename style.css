@@ -218,7 +218,8 @@ body {
     }
 
     .welcome-page {
-        height: calc(100vh);
+        height: 100vh;
+        height: 100dvh; /* Graceful comeback */
         background: url('web-welcome-phone-v2.png') no-repeat center;
         scroll-snap-align: start;
         background-size: cover; 
@@ -292,3 +293,9 @@ body {
         padding: 12px 18px;
     }
 }
+
+@media (max-width: 360px) {
+    .welcome-page {
+      background-position: center top;
+    }
+  }
