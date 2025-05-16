@@ -295,10 +295,10 @@ body {
     }
 }
 
-@media (max-width: 340px) {
+@media (max-width: 360px) {
     .welcome-page {
         background-position: center center;
-        background-size: 150%;
+        background-size: 160%;
         padding-top: 500px;
     }
 }
