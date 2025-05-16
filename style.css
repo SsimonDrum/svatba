@@ -221,7 +221,7 @@ body {
         height: calc(100vh);
         background: url('web-welcome-phone-v2.png') no-repeat center bottom;
         scroll-snap-align: start;
-        background-size: contain; 
+        background-size: cover; 
         background-color: #ECECEC;
         background-repeat: no-repeat;
         background-position: left 50px;
