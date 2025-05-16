@@ -219,7 +219,6 @@ body {
 
     .welcome-page {
         height: calc(100vh);
-        padding-bottom: env(safe-area-inset-bottom);
         background: url('web-welcome-phone-v2.png') no-repeat center bottom;
         scroll-snap-align: start;
         background-size: contain; 
