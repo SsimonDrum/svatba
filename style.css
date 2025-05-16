@@ -225,7 +225,8 @@ body {
         background-size: contain; 
         background-color: #ECECEC;
         background-repeat: no-repeat;
-        background-position: center bottom;
+        background-position: left 50px;
+        padding-top: 500px;
     }
 
     .section {
